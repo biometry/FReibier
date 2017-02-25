@@ -1,0 +1,10 @@
+Package: FReibier
+Title: Miscellaneous R-functions of the Biometry group in Freiburg, Germany
+Version: 0.1
+Authors@R: person("Carsten", "Dormann", email = "carsten.dormann@biom.uni-freiburg.de", role = c("aut", "cre"))
+Description: This package contains an assortment of functions: AIC from R2, creating quadratic and interactions terms for a GLM-formula.
+Depends: R (>= 3.0.0)
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.0
