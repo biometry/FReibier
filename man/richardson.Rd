@@ -18,10 +18,14 @@ a matrix with same dimension and row/column names as the original data; or, if \
 Randomise a set of samples to estimate expected species richness according to Richardson & Richards (2008)
 }
 \details{
-This function shuffles (= randomises = permutes) the entries of a community matrix (= set of samples). As a result, the new matrix has the same number of individuals in each sample, randomly drawn from all individuals across all samples. By doing so repeatedly, an expected number of species can be computed and compared to the observed. It avoids using rarefaction to the lowest sample size and thus wasting information. The algorithm was presented in Richardson & Richards (2008).
+This function shuffles (= randomises = permutes) the entries of a community matrix (= set of samples). As a result, the new matrix has the same number of individuals in each sample, randomly drawn from all individuals across all samples. By doing so repeatedly, an expected number of species can be computed and compared to the observed. It avoids using rarefaction to the lowest sample size and thus wasting information. The algorithm was presented in Richardson & Richards (2008). (Thanks to Caterina Penone for pointing out a stupid error of mine in an earlier version!)
 }
 \examples{
 richardson(spiders)
+rowSums(richardson(spiders))
+rowSums(spiders)
+colSums(richardson(spiders))
+colSums(spiders)
 # compare with original richness:
 obs <- rowSums(spiders > 0)
 rand <- replicate(20, richardson(spiders, return.richness=TRUE))

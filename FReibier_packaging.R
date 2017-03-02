@@ -1,5 +1,5 @@
 library(devtools)
-setwd("~/dropbox/FReibier")
+setwd("~/Data/aktuell/Misc/Stats/FReibier")
 document() # process R-functions into .RD files, change namespace
 setwd("..")
 # build the .tar.gz file:
