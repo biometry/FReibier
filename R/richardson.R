@@ -28,39 +28,38 @@
 #' 
 #' @export
 richardson <- function(data, return.richness=FALSE){
- # species names are the column names of the matrix
- list.of.individuals <- c()
- for (i in 1:nrow(data)){
-   list.of.individuals  <- c(list.of.individuals, 
-                             rep(colnames(data), times=data[i,])) # append the names to the vector
- }  
+ # species names are the column names of the matrix
+ list.of.individuals <- c()
+ for (i in 1:nrow(data)){
+   list.of.individuals <- c(list.of.individuals, rep(colnames(data), times=data[i,])) # append the names to the vector
+} 
 
- species.per.site <- rowSums(data)
- inds <- 1:length(list.of.individuals)
- index <- list()
+ species.per.site <- rowSums(data)
+ inds <- 1:length(list.of.individuals)
+ index <- list()
 
- for (j in 1:nrow(data)){
-   index[[j]] <- sample(x=inds, size=species.per.site[j], replace=FALSE)
-   inds <- inds[-which(inds %in% index[[j]])] # remove sampled individuals
- }
+ for (j in 1:nrow(data)){
+  index[[j]] <- sample(x=inds, size=species.per.site[j], replace=FALSE)
+  inds <- inds[-which(inds %in% index[[j]])] # remove sampled individuals
+ }
 
- #check:
- if (!all.equal(as.numeric(species.per.site), sapply(index, length))) stop("Unequal number of individuals: something when wrong here!")
+ #check:
+ if (!all.equal(as.numeric(species.per.site), sapply(index, length))) stop("Unequal number of individuals: something when wrong here!")
 
- new.data <- data
- new.data[,] <- 0
+ new.data <- data
+ new.data[,] <- 0
 
- for (k in 1:nrow(new.data)){
-   selection <- table(list.of.individuals[index[[k]]])
-   new.data[k, match(names(selection), colnames(new.data))] <- selection
- }
+ for (k in 1:nrow(new.data)){
+  selection <- table(list.of.individuals[index[[k]]])
+  new.data[k, match(names(selection), colnames(new.data))] <- selection
+ }
 
- if (return.richness){
-   out <- rowSums(new.data>0)
- } else {
-   out <- new.data
- }
+ if (return.richness){
+  out <- rowSums(new.data>0)
+ } else {
+  out <- new.data
+ }
 
- return(out)
+ return(out)
 
 }

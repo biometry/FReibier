@@ -6,7 +6,7 @@
 #'
 #' @name spiders8
 #' @docType data
-#' @references 
+#' @references Billeter, R., Liira, J., Bailey, D., Bugter, R., Arens, P., Augenstein, I., Aviron, S., Baudry, J., Bukácek, R., Burel, F., Cerny, M., de Blust, G., De Cock, R., Diekötter, T., Dietz, H., Dirksen, J., Dormann, C.F., Durka, W., Frenzel, M., Hamersky, R., Hendrickx, F., Herzog, F., Klotz, S., Koolstra, B., Lausch, A., Le Coeur, D., Maelfait, J.-P., Opdam, P., Roubalova, M., Schermann, A., Schermann, N., Schmidt, T., Schweiger, O., Smulders, M.J.M., Speelmans, M., Simova, P., Verboom, J., van Wingerden, W.K.R.E., Zobel, M. & Edwards, P.J. (2008) Indicators for biodiversity in agricultural landscapes: a pan-European study. \emph{Journal of Applied Ecology}, \bold{45}, 141-–150
 #' @usage data(spiders8)
 #' @author Carsten F. Dormann \email{carsten.dormann@biom.uni-freiburg.de}
 #' @keywords data
