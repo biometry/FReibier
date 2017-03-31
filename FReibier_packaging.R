@@ -6,3 +6,14 @@ setwd("..")
 build("FReibier", path="FReibier")  
 # install on the computer:
 install("FReibier")
+
+
+
+
+# test things:
+
+library(FReibier)
+data(polis)
+polis
+
+colSums(spiders8)
