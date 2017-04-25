@@ -3,7 +3,7 @@ setwd("~/Data/aktuell/Misc/R-stuff/FReibier")
 document() # process R-functions into .RD files, change namespace
 setwd("..")
 # build the .tar.gz file:
-build("FReibier", path="FReibier")  
+build("FReibier", path="FReibier")   
 # install on the computer:
 install("FReibier")
 
@@ -17,3 +17,6 @@ data(polis)
 polis
 
 colSums(spiders8)
+
+richardson(spiders8)
+solow(spiders8)
