@@ -20,3 +20,11 @@ colSums(spiders8)
 
 richardson(spiders8)
 solow(spiders8)
+
+library(effects)
+franger <- ranger(survived ~ age+sex+passengerClass, data=na.omit(TitanicSurvival), keep.inbag=T, replace=T)
+rangerInfJackMulticlass(franger, newdata=TitanicSurvival[1:2,], calibrate=F)
+
+library(faraway)
+fr <- ranger(yield ~ shade + irrigation + inoculum, data=alfalfa, keep.inbag=T, replace=T)
+rangerInfJack(fr, newdata=alfalfa[1:2,], calibrate=F)
