@@ -3,7 +3,7 @@ Title: Miscellaneous R-functions of the Biometry group in Freiburg, Germany
 Version: 0.2
 Authors@R: person("Carsten", "Dormann", email = "carsten.dormann@biom.uni-freiburg.de", role = c("aut", "cre"))
 Description: This package contains an assortment of functions: AIC from R2, creating quadratic and interactions terms for a GLM-formula.
-Depends: R (>= 3.0.0), ranger
+Depends: R (>= 3.0.0), ranger, randomForestCI
 License: GPL
 Encoding: UTF-8
 LazyData: true

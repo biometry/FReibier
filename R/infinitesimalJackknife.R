@@ -34,7 +34,7 @@
 #' # a binary classification example using the Titanic-data:
 #' library(effects)
 #' franger <- ranger(survived ~ age+sex+passengerClass, data=na.omit(TitanicSurvival), keep.inbag=T, replace=T)
-#' rangerInfJackMulticlass(franger, newdata=TitanicSurvival[1:2,], calibrate=F)
+#' rangerInfJackMulticlass(franger, newdata=na.omit(TitanicSurvival[1:300,]), calibrate=T)
 #' 
 #' # a regression example using the alfalfa data:
 #' library(faraway)
@@ -226,7 +226,7 @@ rInfJack = function(pred, inbag, calibrate = TRUE, used.trees = NULL) {
     # Compute variance estimates using half the trees
     calibration.ratio = 2
     n.sample = ceiling(B / calibration.ratio)
-    results.ss = rangerInfJack(pred, inbag, calibrate = FALSE, used.trees = sample(used.trees, n.sample))
+    results.ss = rInfJack(pred, inbag, calibrate = FALSE, used.trees = sample(used.trees, n.sample))
     
     # Use this second set of variance estimates to estimate scale of Monte Carlo noise
     sigma2.ss = mean((results.ss$var.hat - results$var.hat)^2)

@@ -23,7 +23,8 @@ solow(spiders8)
 
 library(effects)
 franger <- ranger(survived ~ age+sex+passengerClass, data=na.omit(TitanicSurvival), keep.inbag=T, replace=T)
-rangerInfJackMulticlass(franger, newdata=TitanicSurvival[1:2,], calibrate=F)
+rangerInfJackMulticlass(franger, newdata=TitanicSurvival[1, , drop=F], calibrate=F)
+rangerInfJackMulticlass(franger, newdata=na.omit(TitanicSurvival[1:300,]), calibrate=T)
 
 library(faraway)
 fr <- ranger(yield ~ shade + irrigation + inoculum, data=alfalfa, keep.inbag=T, replace=T)

@@ -46,7 +46,7 @@ The warning "No calibration with n<= 20" indicates that the variance estimates w
 # a binary classification example using the Titanic-data:
 library(effects)
 franger <- ranger(survived ~ age+sex+passengerClass, data=na.omit(TitanicSurvival), keep.inbag=T, replace=T)
-rangerInfJackMulticlass(franger, newdata=TitanicSurvival[1:2,], calibrate=F)
+rangerInfJackMulticlass(franger, newdata=na.omit(TitanicSurvival[1:300,]), calibrate=T)
 
 # a regression example using the alfalfa data:
 library(faraway)
