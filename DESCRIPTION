@@ -1,10 +1,14 @@
 Package: FReibier
 Title: Miscellaneous R-functions of the Biometry group in Freiburg, Germany
-Version: 0.2
-Authors@R: person("Carsten", "Dormann", email = "carsten.dormann@biom.uni-freiburg.de", role = c("aut", "cre"))
-Description: This package contains an assortment of functions: AIC from R2, creating quadratic and interactions terms for a GLM-formula.
-Depends: R (>= 3.0.0), ranger, randomForestCI
+Version: 0.3
+Authors@R: c(person("Carsten", "Dormann", email = "carsten.dormann@biom.uni-freiburg.de", role = c("aut", "cre")), person("Severin", "Hauenstein", email="severin.hauenstein@biom.uni-freiburg.de", role="aut"))
+Author: Carsten Dormann [aut, cre], Severin Hauenstein [aut]
+Maintainer: Carsten Dormann <carsten.dormann@biom.uni-freiburg.de>
+Description: This package contains an assortment of functions: AIC from R2, creating quadratic and interactions terms for a GLM-formula, error bars for ranger predictions, generating spatially autocorrelated data.
+Depends: R (>= 3.0.0), ranger, randomForestCI, ncdf4, RandomFields, raster, wordspace
 License: GPL
 Encoding: UTF-8
 LazyData: true
+ByteCompile: true
+URL: https://github.com/biometry/FReibier
 RoxygenNote: 6.0.1
