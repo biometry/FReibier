@@ -1,5 +1,5 @@
 library(devtools)
-setwd("~/Data/aktuell/Misc/R-stuff/FReibier")
+setwd("~/Data/aktuell/Misc/R-stuff/FReibier/FReibier")
 document() # process R-functions into .RD files, change namespace
 setwd("..")
 build("FReibier", path="FReibier")   # build the .tar.gz file
