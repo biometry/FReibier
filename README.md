@@ -6,7 +6,7 @@ This R-package is supposed to act as container for the little things that accumu
 To install on R, please use
 
     library(devtools)
-    install_github("biometry/FReibier")
+    install_github("biometry/FReibier/FReibier")
 
 Any suggestions, corrections and additions are welcome!
 
