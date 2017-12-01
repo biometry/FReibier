@@ -4,7 +4,7 @@
 \alias{rangerInfJack}
 \alias{rangerInfJackMulticlass}
 \alias{rInfJack}
-\title{Compute variance of estimate from a "ranger" model}
+\title{Deprecated: Compute variance of estimate from a "ranger" model}
 \usage{
 rangerInfJack(rf, newdata, calibrate = TRUE)
 
@@ -34,7 +34,7 @@ For regressions, a two-column matrix is returned, with predictions in the first 
 Computes variances for a prediction from a ranger-model, using the infinitesimal jackknife procedure
 }
 \details{
-This function is a ranger-adaptation of the package \pkg{randomForestCI} of Wager et al. (2014). Their original can be found on github: \url{ https://github.com/swager/randomForestCI/}. All that the three functions below do differently is to allow using the ranger model object (which is computed much faster than the classical randomForest in \pkg{randomForest}). The functions are named differently to avoid confusion.
+This function is a ranger-adaptation of the package \pkg{randomForestCI} of Wager et al. (2014). Their original can be found on github: \url{ https://github.com/swager/randomForestCI/}. All that the three functions below do differently is to allow using the ranger model object (which is computed much faster than the classical randomForest in \pkg{randomForest}). The functions are named differently to avoid confusion. Instead, use the same functions as provided in \pkg{ranger} now!
 
 For classification problems, use \code{rangerInfJackMulticlass}; for regression problems use \code{rangerInfJack}. \code{rInfJack} is the internal workhorse called by the other two functions. It is probably of little relevance for the typical user.
 }
