@@ -11,4 +11,4 @@ Encoding: UTF-8
 LazyData: true
 ByteCompile: true
 URL: https://github.com/biometry/FReibier
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

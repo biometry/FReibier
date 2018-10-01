@@ -19,6 +19,7 @@ colSums(spiders8)
 richardson(spiders8)
 solow(spiders8)
 
+library(ranger)
 library(effects)
 franger <- ranger(survived ~ age+sex+passengerClass, data=na.omit(TitanicSurvival), keep.inbag=T, replace=T)
 rangerInfJackMulticlass(franger, newdata=TitanicSurvival[1, , drop=F], calibrate=F)
